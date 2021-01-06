@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    font-size: 3rem;
+    font-weight: 900;
+    span {
+      color: rgb(204, 0, 0);
+    }
+  }
+}
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  .color {
+    display: flex;
+    justify-content: center;
+    label {
+      padding-top: 0.2rem;
+    }
+    input {
+      -webkit-appearance: none;
+      margin-left: 0.5rem;
+      border: none;
+      padding: rem;
+      width: 2rem;
+      height: 2rem;
+    }
+    input[type="color"]::-webkit-color-swatch-wrapper {
+      padding: 0;
+      border-radius: 9999px;
+    }
+    input[type="color"]::-webkit-color-swatch {
+      border-radius: 9999px;
+    }
+  }
+  .time {
+    margin-left: 2rem;
+    input {
+      border-radius: 9999px;
+      padding: 0.2rem;
+      font-size: 1rem;
+      width: 6rem;
+      padding-left: 1rem;
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    position: relative;
+    canvas {
+      position: absolute;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  font-size: 1rem;
+}
+.selImage {
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    p {
+      display: flex;
+
+      label {
+        display: none;
+      }
+      input {
+        border-radius: 999px;
+      }
+    }
+  }
+}
+button {
+  padding: 0.5rem 3rem;
+  border-radius: 999px;
+}
+::-webkit-file-upload-button {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 1rem;
+}

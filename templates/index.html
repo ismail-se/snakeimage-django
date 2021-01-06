@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <title>Snake</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Logo<span>.</span></div>
+    </header>
+    <div class="select">
+      <div class="color">
+        <label for="color">Select Color</label>
+        <input
+          value="#ff0000"
+          type="color"
+          name="color"
+          id="color"
+          class="colorInput"
+        />
+      </div>
+      <div class="time">
+        <label for="duration">Duration</label>
+        <input
+          value="5"
+          type="number"
+          name="duration"
+          id="duration"
+          class="duration"
+        />
+        ms
+      </div>
+    </div>
+    <div class="selImage">
+      <form action="/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">Change Image</button>
+      </form>
+    </div>
+    <main>
+      <div class="container">
+        <canvas id="canvas" style="border: 1px solid #000000"></canvas>
+        <script>
+          console.log("{{img}}");
+        </script>
+        <img src="/media/{{Image.img}}" style="width: 600px" alt="" />
+      </div>
+    </main>
+    <div class="button">
+      <button onclick="stopSnake()" style="margin-right: 1rem;">Reset</button>
+      <button onclick="createSnake()">Start</button>
+    </div>
+  </body>
+  <script src="static/js/app.js"></script>
+</html>
